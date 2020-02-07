@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<% @poems.each do |poem| %>
+  <div>
+    <td><%= poem.body %></td>
+    <td><%= link_to 'Show', poem_path(poem) %></td>
+    <td><%= link_to 'Edit', edit_poem_path(poem) %></td>
+    <td><%= link_to 'Destroy', poem, method: :delete, data: { confirm: 'Are yosure?' } %></td>
+  </div>
+<% end %>
+
+<br>
+
+<%#= link_to 'New Poem', new_poem_path %>
